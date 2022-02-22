@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Your order has been confirmed! ✅</h1>
+  <br>
+  <h3>Here are the details of your reservation!</h1>
+  <br>
+  <br>
+  <h4><%= "FROM: #{@reservation.start_date} TO: #{@reservation.end_date} "%></h4>
+  <p><%= "So for a total of #{@answer} days" %></p>
+  <br>
+  <h4><%= "TOTAL: $ #{@answer * @reservation.car.price}" %></h4>
+  <p><%= @reservation.car.brand %> <%= @reservation.car.model %></p>
+</div>
