@@ -6,4 +6,5 @@ class Car < ApplicationRecord
   validates :brand, :model, :description, presence: true
   validates :price, :capacity, presence: true, numericality: { only_integer: true }
   attribute :occasion, default: "N/A"
+  attribute :image, default: "https://i.pinimg.com/564x/77/b8/1b/77b81bd9b49ea414cc73c06481c965e1.jpg"
 end
