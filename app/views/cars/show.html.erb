@@ -1,8 +1,13 @@
 <H1>SHOW</H1>
 
-<p><% @car.reviews.each do |review| %></p>
-<%= review.content %> <%= review.rating %>/5
-<%= link_to 'Delete', review_path(review),
+<% @car.reviews.each do |review| %>
+  <p><%= review.content %> <%= review.rating %>/5</p>
+  <%= link_to 'Delete', review_path(review),
         method: :delete,
         data: { confirm: "Are you sure?" } %>
 <% end %>
+
+<%= link_to 'Add a review', new_car_review_path(@car), class: "btn btn-primary" %>
+<%= link_to 'Go to vehicules', cars_path, class: "btn btn-primary" %>
+<%= link_to 'Edit vehicule', edit_car_path(@car), class: "btn btn-primary"  %>
+<%= link_to 'RESERVE THIS VEHICULE', new_car_reservation_path(@car), class: "btn btn-primary"  %>
