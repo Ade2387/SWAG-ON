@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_many :reservation, dependent: :destroy
   has_many :reviews, dependent: :destroy
   validates :username, presence: true, uniqueness: true
+  attribute :avatar, default: "https://mycoloring-pages.com/images/stencils/car-stencils/car-stencils-11.jpg"
 end
