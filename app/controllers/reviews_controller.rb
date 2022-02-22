@@ -9,7 +9,7 @@ class ReviewsController < ApplicationController
     @car = Car.find(params[:car_id])
     @review.car = @car
     @review.user = current_user
-    if @car.save
+    if @review.save
       redirect_to @car
     else
       render :new
@@ -17,10 +17,15 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
+    @review = Review.find(params[:id])
+    @car = @review.car
+    @review.destroy
+    redirect_to car_path(@car)
   end
 
   private
 
   def review_params
+    params.require(:review).permit(:content, :rating)
   end
 end

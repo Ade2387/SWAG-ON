@@ -1,1 +1,8 @@
 <H1>SHOW</H1>
+
+<p><% @car.reviews.each do |review| %></p>
+<%= review.content %> <%= review.rating %>/5
+<%= link_to 'Delete', review_path(review),
+        method: :delete,
+        data: { confirm: "Are you sure?" } %>
+<% end %>
