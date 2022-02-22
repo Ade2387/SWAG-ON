@@ -91,10 +91,18 @@
 
 .dashboard {
   color: #FFFFFA;
-  padding: 0 10px;
+
   text-decoration: none;
   top: 30px;
+  right: 100px;
+  position: absolute;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, serif;
+  padding: 1px;
+  size: 2000%;
 }
 .dashboard:hover {
   color: #FF312E;
+  transition-duration: 0.5s;
+  text-decoration: underline;
+  padding: 0 0 60px;
 }
