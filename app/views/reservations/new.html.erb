@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Reserve THIS CAR!</h1>
+  <%= simple_form_for [ @car, @reservation] do |f| %>
+    <%= f.input :start_date%>
+    <%= f.input :end_date%>
+    <%= f.submit "Make the reservation", class: "btn btn-primary" %>
+    <%= "$#{@car.price}/day" %>
+  <% end %>
+</div>

@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'pages#dashboard'
   resources :cars do
     resources :reviews, only: %i[new create]
-    resources :reservations, only: %i[new create show]
+    resources :reservations, only: %i[new create]
   end
   resources :reviews, only: [:destroy]
-  resources :reservations, only: [:destroy]
+  resources :reservations, only: [:destroy, :show]
 end
