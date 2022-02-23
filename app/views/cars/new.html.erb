@@ -1,3 +1,4 @@
+<div class="container">
   <H1>NEW CAR</H1>
   <%= simple_form_for([@car]) do |f| %>
     <%= f.input :brand %>
@@ -11,5 +12,6 @@
     <%= f.input :image %>
     <%= f.submit "Add vehicule" %>
   <% end %>
-<br>
-<%= link_to 'Go to vehicules', cars_path, class: "btn btn-primary" %>
+  <br>
+  <%= link_to 'Go to vehicules', cars_path, class: "btn btn-primary" %>
+</div>
