@@ -10,8 +10,6 @@
 
 .car-owner-info {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .car-image {
@@ -21,6 +19,7 @@
 }
 
 .car-name {
+  padding-top: 10px;
   font-size: 25px;
   font-weight: bold;
 }
@@ -33,4 +32,5 @@
   border-radius: 50%;
   height: 50px;
   width: 50px;
+  margin-right: 10px;
 }
