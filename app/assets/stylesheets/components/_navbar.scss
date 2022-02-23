@@ -22,6 +22,29 @@
  border-color: #E8217E;
 }
 
+.avatar:hover {
+  border-color: white;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  background-color: black;
+}
+
+.dropdown-item {
+  background-color: black;
+  color:#E8217E;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.dropdown-item:hover {
+  transition-duration: 1s;
+  background-color: #FFFFFA;
+}
+
 .search-box {
   border: 10%;
   border-color: black;
@@ -31,13 +54,6 @@
   border-radius: 0%;
 }
 
-
-.dashboard:hover {
-  color: #E8217E;
-  transition-duration: 0.5s;
-  text-decoration: underline;
-  padding: 0 0 60px;
-}
 
 .login {
   color: #FFFFFA;
@@ -53,9 +69,9 @@
 }
  .login:hover {
   color: #E8217E;
-  transition-duration: 0.5s;
+  transition-duration: 1s;
   text-decoration: underline;
-  padding: 0 0 60px;
+  padding: 0 0 80px;
  }
 
  @media (max-width: 960px) {
