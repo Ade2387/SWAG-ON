@@ -22,6 +22,10 @@
  border-color: #E8217E;
 }
 
+.avatar:hover {
+  border-color: white;
+  cursor: pointer;
+}
 .search-box {
   border: 10%;
   border-color: black;
@@ -31,13 +35,6 @@
   border-radius: 0%;
 }
 
-
-.dashboard:hover {
-  color: #E8217E;
-  transition-duration: 0.5s;
-  text-decoration: underline;
-  padding: 0 0 60px;
-}
 
 .login {
   color: #FFFFFA;

@@ -22,7 +22,7 @@
               <%= image_tag "https://mycoloring-pages.com/images/stencils/car-stencils/car-stencils-11.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <%= link_to "Profile", "#", class: "dropdown-item" %>
-                <%= link_to "Dashboard", "#", class: "dashboard" %>
+                <%= link_to "Dashboard", "#", class: "dropdown-item" %>
                 <%= link_to "Edit Profile", "#", class: "dropdown-item" %>
                 <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
               </div>
