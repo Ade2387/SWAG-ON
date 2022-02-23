@@ -1,0 +1,50 @@
+h1,
+p,
+a {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato";
+}
+h1 {
+    font-size: 2.8em;
+    padding: 10px 0;
+    font-weight: 800;
+}
+p {
+    font-size: 1.1em;
+    font-weight: 100;
+    letter-spacing: 5px;
+}
+.banner-image {
+  background: #040404;
+  background-image: url("https://i.pinimg.com/originals/65/3a/c7/653ac7f4ecfe013c6efb2017a5807724.gif");
+  background-size: cover;
+  background-position-y: -800px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+}
+.banner-content {
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+.btn-bgstroke {
+    font-size: 20px;
+    display: inline-block;
+    border: 3px solid rgb(0, 0, 0);
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 300;
+    margin-top: 30px;
+    color: black;
+    text-decoration: none;
+    background-color: #e8217e;
+}
+.btn-bgstroke:hover {
+    background-color: rgb(0, 0, 0);
+    color: #e8217e;
+    text-decoration: none;
+    transition: 1s;
+}
