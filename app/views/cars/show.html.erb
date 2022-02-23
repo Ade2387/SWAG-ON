@@ -1,5 +1,8 @@
 <H1>SHOW</H1>
 
+<%= @car.brand %>
+<%= @car.model %>
+
 <% @car.reviews.each do |review| %>
   <p><%= review.content %> <%= review.rating %>/5</p>
   <%= link_to 'Delete', review_path(review),
