@@ -1,13 +1,21 @@
 <H1>SHOW</H1>
 
-<% @car.reviews.each do |review| %>
-  <p><%= review.content %> <%= review.rating %>/5</p>
-  <%= link_to 'Delete', review_path(review),
-        method: :delete,
-        data: { confirm: "Are you sure?" } %>
-<% end %>
+<%= @car.brand %>
+<%= @car.model %>
 
-<%= link_to 'Add a review', new_car_review_path(@car), class: "btn btn-primary" %>
+
+  <% @car.reviews.each do |review| %>
+    <div class="reviews">
+      <p><%= review.content %> <%= review.rating %>/5</p>
+      <span class="delete"><%= link_to 'Delete review', review_path(review),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %></span>
+    </div>
+  <% end %>
+
+<% if user_signed_in? %>
+  <%= link_to 'Add a review', new_car_review_path(@car), class: "btn btn-primary" %>
+<% end %>
 <%= link_to 'Go to vehicules', cars_path, class: "btn btn-primary" %>
 <%= link_to 'Edit vehicule', edit_car_path(@car), class: "btn btn-primary"  %>
-<%= link_to 'RESERVE THIS VEHICULE', new_car_reservation_path(@car), class: "btn btn-primary"  %>
+<%= link_to 'Book this Vehicule', new_car_reservation_path(@car), class: "btn btn-primary"  %>

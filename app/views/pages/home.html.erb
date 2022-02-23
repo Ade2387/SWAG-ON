@@ -1,9 +1,5 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
-<% @cars.each do |car| %>
-  <div>
-    <%= car.brand %>
-  </div>
-<% end %>
+
 
 <%= link_to 'Go to vehicules', cars_path, class: "btn btn-primary" %>
