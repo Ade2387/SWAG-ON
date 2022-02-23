@@ -1,33 +1,28 @@
-h1,
-p,
-a {
-    margin: 0;
-    padding: 0;
-    font-family: "Lato";
-}
-h1 {
-    font-size: 2.8em;
-    padding: 10px 0;
-    font-weight: 800;
-}
-p {
-    font-size: 1.1em;
-    font-weight: 100;
-    letter-spacing: 5px;
-}
+
 .banner-image {
   background: #040404;
   background-image: url("https://i.pinimg.com/originals/65/3a/c7/653ac7f4ecfe013c6efb2017a5807724.gif");
   background-size: cover;
-  background-position-y: -800px;
+  background-position-y: -730px;
   height: 600px;
   display: flex;
   align-items: center;
 }
 .banner-content {
-    width: 100%;
-    text-align: center;
-    color: white;
+  font-family: "lato";
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+.banner-content h1 {
+  font-size: 2.8em;
+  padding: 10px 0;
+  font-weight: 800;
+}
+.banner-content p {
+  font-size: 1.1em;
+  font-weight: 100;
+  letter-spacing: 5px;
 }
 .btn-bgstroke {
     font-size: 20px;
