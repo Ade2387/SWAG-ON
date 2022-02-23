@@ -9,6 +9,5 @@
   <br>
   <h4><%= "TOTAL: $ #{@answer * @reservation.car.price}" %></h4>
   <p><%= @reservation.car.brand %> <%= @reservation.car.model %></p>
+  <%= link_to 'Go to vehicules', cars_path, class: "btn btn-primary" %>
 </div>
-
-<%= link_to 'Go to vehicules', cars_path, class: "btn btn-primary" %>
