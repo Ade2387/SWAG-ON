@@ -7,7 +7,7 @@
           <h2><%= @car.brand %></h2>
           <h3><%= @car.description %></h3>
           <br>
-          <h6><%= @car.price %>€/day</h6>
+
           <% @car.reviews.each do |review| %>
             <div class="reviews">
             <p><%= review.content %> <%= review.rating %>/5</p>
