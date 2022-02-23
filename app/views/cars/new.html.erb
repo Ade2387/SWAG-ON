@@ -1,10 +1,9 @@
 <div class="container">
-  <H1>NEW CAR</H1>
+  <H1>NEW VEHICLE</H1>
   <%= simple_form_for([@car]) do |f| %>
     <%= f.input :brand %>
     <%= f.input :model %>
     <%= f.input :capacity %>
-    <%# <% raise %>
     <%= f.input :categories, collection: Category.all, input_html: { multiple: true, class: "multiple-select" }, include_hidden: false %>
     <%= f.input :occasion %>
     <%= f.input :price %>
