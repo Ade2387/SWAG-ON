@@ -1,13 +1,20 @@
-<div class="container">
-  <h1>Your order has been confirmed! ✅</h1>
-  <br>
-  <h3>Here are the details of your reservation!</h1>
-  <br>
-  <br>
-  <h4><%= "FROM: #{@reservation.start_date} TO: #{@reservation.end_date} "%></h4>
-  <p><%= "So for a total of #{@answer} days" %></p>
-  <br>
-  <h4><%= "TOTAL: $ #{@answer * @reservation.car.price}" %></h4>
-  <p><%= @reservation.car.brand %> <%= @reservation.car.model %></p>
-  <%= link_to 'Go to vehicules', cars_path, class: "btn btn-primary" %>
+<div class="confirmation-container">
+  <div class="summary">
+    <h1>Your order has been confirmed! ✅</h1>
+    <h4>Here are the details of your reservation!</h4>
+    <br>
+    <p><%= @reservation.car.brand %> <%= @reservation.car.model %></p>
+    <img src= <%= @reservation.car.image %> />
+  </div>
+  <div class="summary2">
+    <div>
+      <h4><%= "FROM: #{@reservation.start_date} TO: #{@reservation.end_date} "%></h4>
+      <p><%= "So for a total of #{@answer} days" %></p>
+    </div>
+    <div class="total-price">
+      <h2><%= "TOTAL PRICE: $ #{@answer * @reservation.car.price}" %></h2>
+      <br>
+      <%= link_to 'Go back to the homepage', cars_path, class: "btn btn-primary" %>
+    </div>
+  </div>
 </div>
