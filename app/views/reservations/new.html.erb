@@ -1,11 +1,21 @@
   <div class="flex-container" data-controller="date">
     <div class="cardgrow">
-      <h1>Reserve THIS CAR!</h1>
-      <h3><%= @car.brand %></h3>
-      <h3><%= @car.model %></h3>
-      <h3><%= @car.capacity %></h3>
+      <div class="card-car">
+        <img src= <%= @car.image %> />
+        <div class="card-car-infos">
+          <h2><%= @car.brand %></h2>
+          <h3><%= @car.description %></h3>
+          <br>
+          <h6><%= @car.price %>€/day</h6>
+          <% @car.reviews.each do |review| %>
+            <div class="reviews">
+            <p><%= review.content %> <%= review.rating %>/5</p>
+            </div>
+          <% end %>
+        </div>
+      </div>
     </div>
-    <div>
+    <div class="reservation-container">
       <%= simple_form_for [ @car, @reservation] do |f| %>
         <%= f.input :start_date, as: :string, input_html: { class: "datepicker", data: { 'date-target' => 'start' } }%>
         <%= f.input :end_date, as: :string, input_html: { class: "datepicker", data: { 'date-target' => 'end' }}%>

@@ -1,7 +1,13 @@
 .flex-container {
   display: flex;
+  justify-content: space-between;
 }
 
 .cardgrow {
-  flex-grow:4;
+  flex-grow: 4;
+}
+
+.reservation-container {
+  margin-left: 30px;
+  margin-right: 10px;
 }
