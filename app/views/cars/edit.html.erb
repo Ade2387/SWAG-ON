@@ -1,3 +1,13 @@
-<H1>EDIT</H1>
+<H1>EDIT THIS VEHICULE</H1>
 
+<%= simple_form_for([@car]) do |f| %>
+    <%= f.input :brand %>
+    <%= f.input :model %>
+    <%= f.input :capacity %>
+    <%= f.input :occasion %>
+    <%= f.input :price %>
+    <%= f.input :description %>
+    <%= f.submit "Save" %>
+  <% end %>
+<br>
 <%= link_to 'Go to vehicules', cars_path, class: "btn btn-primary" %>

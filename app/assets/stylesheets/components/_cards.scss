@@ -1,0 +1,38 @@
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.card-container {
+  // display: flex;
+}
+
+.car-owner-info {
+  display: flex;
+  //justify-content: space-between;
+  // align-items: center;
+}
+
+.car-image {
+  border-radius: 9px;
+  object-fit: cover;
+  background-position: center;
+}
+
+.car-name {
+  padding-top: 10px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.car-owner-info {
+  display: flex;
+}
+
+.owner-avatar {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+}
