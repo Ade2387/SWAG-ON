@@ -1,8 +1,48 @@
+.card-car {
+  overflow: hidden;
+  height: 100%;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+.card-car img {
+  height: 100%;
+  width: 520px;
+  object-fit: cover;
+}
+
+.card-car h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-car p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+}
+
+.card-car-infos2 {
+  padding: 20px;
+  overflow: scroll;
+}
+
+
+
+
+
 .reviews {
   display: flex;
   justify-content: flex-start;
+  margin-top: 10px;
 }
 
 .delete {
   padding-left: 20px;
+  text-decoration: none !important;
+
 }

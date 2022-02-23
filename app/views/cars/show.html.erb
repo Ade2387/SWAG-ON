@@ -1,21 +1,28 @@
-<H1>SHOW</H1>
 
-<%= @car.brand %>
-<%= @car.model %>
-
-
-  <% @car.reviews.each do |review| %>
-    <div class="reviews">
-      <p><%= review.content %> <%= review.rating %>/5</p>
-      <span class="delete"><%= link_to 'Delete review', review_path(review),
-            method: :delete,
-            data: { confirm: "Are you sure?" } %></span>
+<div class="container" style="padding-top: 20px">
+  <div class="card-car">
+    <img src= <%= @car.image %> />
+    <div class="card-car-infos">
+      <h2><%= @car.brand %></h2>
+      <h3><%= @car.description %></h3>
+      <br>
+      <h6><%= @car.price %>€/day</h6>
+      <% @car.reviews.each do |review| %>
+      <div class="reviews">
+        <p><%= review.content %> <%= review.rating %>/5</p>
+        <span class="delete"><%= link_to 'Delete review', review_path(review),
+              method: :delete,
+              data: { confirm: "Are you sure?" } %></span>
+      </div>
+      <% end %>
     </div>
+  </div>
+  <br>
+  <% if user_signed_in? %>
+    <%= link_to 'Add a review', new_car_review_path(@car), class: "btn btn-primary" %>
   <% end %>
-
-<% if user_signed_in? %>
-  <%= link_to 'Add a review', new_car_review_path(@car), class: "btn btn-primary" %>
-<% end %>
-<%= link_to 'Go to vehicules', cars_path, class: "btn btn-primary" %>
-<%= link_to 'Edit vehicule', edit_car_path(@car), class: "btn btn-primary"  %>
-<%= link_to 'Book this Vehicule', new_car_reservation_path(@car), class: "btn btn-primary"  %>
+  <%= link_to 'Go to vehicules', cars_path, class: "btn btn-primary" %>
+  <%= link_to 'Edit vehicule', edit_car_path(@car), class: "btn btn-primary"  %>
+  <%= link_to 'Book this Vehicule', new_car_reservation_path(@car), class: "btn btn-primary"  %>
+  <br>
+</div>
