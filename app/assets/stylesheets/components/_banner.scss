@@ -15,24 +15,36 @@ p {
     font-weight: 100;
     letter-spacing: 5px;
 }
-.banner {
+.banner-image {
+  background: #040404;
+  background-image: url("https://i.pinimg.com/originals/65/3a/c7/653ac7f4ecfe013c6efb2017a5807724.gif");
+  background-size: cover;
+  background-position-y: -800px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+}
+.banner-content {
     width: 100%;
-    padding: 60px 0;
     text-align: center;
-    background: #040404;
-    background-image: url("https://i.pinimg.com/originals/a2/b5/6e/a2b56e7f90f9c666369c61afda5c6d41.jpg");
+    color: white;
 }
 .btn-bgstroke {
     font-size: 20px;
     display: inline-block;
-    border: 1px solid rgb(255, 37, 37);
+    border: 3px solid rgb(0, 0, 0);
     padding: 10px 20px;
     border-radius: 10px;
     cursor: pointer;
     font-weight: 300;
     margin-top: 30px;
+    color: black;
+    text-decoration: none;
+    background-color: #e8217e;
 }
 .btn-bgstroke:hover {
     background-color: rgb(0, 0, 0);
-    color: #ff3434;
+    color: #e8217e;
+    text-decoration: none;
+    transition: 1s;
 }

@@ -1,16 +1,9 @@
-<div class="banner">
-    <h1>Homepage</h1>
-    <p>Find me in app/views/pages/home.html.erb</p>
-    <% @cars.each do |car| %>
-    <div>
-    <%= car.brand %>
-    </div>
-    <% end %>
-
-    <%= link_to 'Go to vehicules', cars_path, class: "btn btn-primary" %>
-
-
+<div class="banner-image">
+  <div class="banner-content">
     <h1>Swag-On</h1>
-    <p>A Swaghicule for every occasion</p>
+    <p>A vehicule for every occasion</p>
     <a class="btn-bgstroke">Search here</a>
   </div>
+</div>
+
+<%= link_to 'Go to vehicules', cars_path, class: "btn btn-primary" %>
