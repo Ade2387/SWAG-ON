@@ -1,9 +1,16 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<% @cars.each do |car| %>
-  <div>
+<div class="banner">
+    <h1>Homepage</h1>
+    <p>Find me in app/views/pages/home.html.erb</p>
+    <% @cars.each do |car| %>
+    <div>
     <%= car.brand %>
-  </div>
-<% end %>
+    </div>
+    <% end %>
 
-<%= link_to 'Go to vehicules', cars_path, class: "btn btn-primary" %>
+    <%= link_to 'Go to vehicules', cars_path, class: "btn btn-primary" %>
+
+
+    <h1>Swag-On</h1>
+    <p>A Swaghicule for every occasion</p>
+    <a class="btn-bgstroke">Search here</a>
+  </div>
