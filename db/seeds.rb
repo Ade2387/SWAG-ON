@@ -8,17 +8,17 @@ if Rails.env.development?
   Category.destroy_all
 end
 
-oleg = User.create(username: "oleg", email: "a@a.a", password: "azerty")
+oleg = User.create(username: "oleg", email: "a@a.a", password: "azerty", avatar: "https://i1.sndcdn.com/avatars-000469158501-b2adiy-t500x500.jpg")
 sebastien = User.create(username: "sebastien", email: "b@b.b", password: "sebastien")
 trump = User.create(username: "Trump", email: "c@c.c", password: "trump2022")
 darth_vador = User.create(username: "Darth Vader", email: "d@d.d", password: "darthvader")
 
-ferrari = Car.new(brand: "Ferrari", model: "F50", price: 1499, capacity: 2, occasion: "Show-off", description: "A magnificent car to impress any chick before (or after) a lovely evening in a fancy restaurant. Getting laid guarantee!")
-tank = Car.new(brand: "Tank", model: "T-14 Armata", price: 10_500, capacity: 3, occasion: "War", description: "A beast of technology. Ideal to invade any neighboring country. Putin would use it against Ukraine so... why not give it a try!? A little greedy in gasoline though.")
-death_star = Car.new(brand: "Starkiller", model: "Death Star III", price: 54_990_000, capacity: 628_628, occasion: "War", description: "The one and only Death Star III fully functional (including super laser). Additional crew members available upon request. Z license required to operate it. Attention, wide space needed to park it.")
-porsche = Car.new(brand: "Porsche", model: "Carrera", price: 990, capacity: 2, occasion: "Show-off", description: "Brand new Porsche Carrera GT. Ideal for speed trip in nice and lovely countryside. Careful with the speed, trafic rules doesn't adapt to the car. It's the other way around.")
-skateboard = Car.new(brand: "Skateboard", model: "Skateboard", price: 25, capacity: 1, occasion: "Show-off", description: "Super Skateboard to ride the best ramps of any skatepark. Legend says that it belonged to Tony Hawk.")
-dolorean = Car.new(brand: "DeLorean", model: "DMC-12", price: 99, capacity: 2, occasion: "Street race", description: "Old timer that has horse power under the hood! People says that it travels in time but has never been confirmed...")
+ferrari = Car.new(brand: "Ferrari", model: "F50", price: 1499, capacity: 2, occasion: "Show-off", description: "A magnificent car to impress any chick before (or after) a lovely evening in a fancy restaurant. Getting laid guarantee!", image: "https://carconfigurator.ferrari.com/assets/cars/portofinom/packages/default/car-ferrari-portofino-m_splash.jpg")
+tank = Car.new(brand: "Tank", model: "T-14 Armata", price: 10_500, capacity: 3, occasion: "War", description: "A beast of technology. Ideal to invade any neighboring country. Putin would use it against Ukraine so... why not give it a try!? A little greedy in gasoline though.", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Challenger2-Bergen-Hohne-Training-Area-2.jpg/1200px-Challenger2-Bergen-Hohne-Training-Area-2.jpg")
+death_star = Car.new(brand: "Starkiller", model: "Death Star III", price: 54_990_000, capacity: 628_628, occasion: "War", description: "The one and only Death Star III fully functional (including super laser). Additional crew members available upon request. Z license required to operate it. Attention, wide space needed to park it.", image: "https://lumiere-a.akamaihd.net/v1/images/Death-Star-I-copy_36ad2500.jpeg")
+porsche = Car.new(brand: "Porsche", model: "Carrera", price: 990, capacity: 2, occasion: "Show-off", description: "Brand new Porsche Carrera GT. Ideal for speed trip in nice and lovely countryside. Careful with the speed, trafic rules doesn't adapt to the car. It's the other way around.", image: "https://www.topgear.com/sites/default/files/2021/11/FL22_Mecum%20Kissimmee%202022_1994%20Porsche%20911%20Turbo.jpg")
+skateboard = Car.new(brand: "Skateboard", model: "Skateboard", price: 25, capacity: 1, occasion: "Show-off", description: "Super Skateboard to ride the best ramps of any skatepark. Legend says that it belonged to Tony Hawk.", image: "https://www.skatedeluxe.com/blog/wp-content/uploads/2020/08/Skateboard-Cruiser-1.jpg")
+dolorean = Car.new(brand: "DeLorean", model: "DMC-12", price: 99, capacity: 2, occasion: "Street race", description: "Old timer that has horse power under the hood! People says that it travels in time but has never been confirmed...", image: "https://sf2.autojournal.fr/wp-content/uploads/autojournal/2021/03/original.jpeg")
 
 ferrari.user = oleg
 porsche.user = oleg
