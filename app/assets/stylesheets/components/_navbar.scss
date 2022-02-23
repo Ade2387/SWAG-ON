@@ -5,7 +5,7 @@
 }
 
 .navbar-swagon .navbar-collapse {
-  flex-grow: 0;
+  // flex-grow: 0;
   color: black;
 }
 
@@ -31,18 +31,7 @@
   border-radius: 0%;
 }
 
-.dashboard {
-  color: #FFFFFA;
-  margin: auto;
-  text-decoration: none;
-  top: 30px;
-  right: 100px;
-  position: absolute;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, serif;
-  padding: 1px;
-  size: 2000%;
-  float: right;
-}
+
 .dashboard:hover {
   color: #FF312E;
   transition-duration: 0.5s;
