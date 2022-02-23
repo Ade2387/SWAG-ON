@@ -3,9 +3,12 @@
     <%= f.input :brand %>
     <%= f.input :model %>
     <%= f.input :capacity %>
+    <%# <% raise %>
+    <%= f.input :categories, collection: Category.all, input_html: { multiple: true, class: "multiple-select" }, include_hidden: false %>
     <%= f.input :occasion %>
     <%= f.input :price %>
     <%= f.input :description %>
+    <%= f.input :image %>
     <%= f.submit "Add vehicule" %>
   <% end %>
 <br>
