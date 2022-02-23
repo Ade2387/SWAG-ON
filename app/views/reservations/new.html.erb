@@ -1,22 +1,22 @@
-<div class="flex-container" data-controller="date">
-  <div class="cardgrow">
-    <h1>Reserve THIS CAR!</h1>
-    <h3><%= @car.brand %></h3>
-    <h3><%= @car.model %></h3>
-    <h3><%= @car.capacity %></h3>
-  </div>
-  <div>
-    <%= simple_form_for [ @car, @reservation] do |f| %>
-      <%= f.input :start_date, as: :string, input_html: { class: "datepicker", data: { 'date-target' => 'start' } }%>
-      <%= f.input :end_date, as: :string, input_html: { class: "datepicker", data: { 'date-target' => 'end' }}%>
-      <% if user_signed_in? %>
-        <%= f.submit "Make the reservation", class: "btn btn-primary" %>
-      <% else %>
-        <%= link_to "login", new_user_session_path, class: "btn btn-primary" %>
+  <div class="flex-container" data-controller="date">
+    <div class="cardgrow">
+      <h1>Reserve THIS CAR!</h1>
+      <h3><%= @car.brand %></h3>
+      <h3><%= @car.model %></h3>
+      <h3><%= @car.capacity %></h3>
+    </div>
+    <div>
+      <%= simple_form_for [ @car, @reservation] do |f| %>
+        <%= f.input :start_date, as: :string, input_html: { class: "datepicker", data: { 'date-target' => 'start' } }%>
+        <%= f.input :end_date, as: :string, input_html: { class: "datepicker", data: { 'date-target' => 'end' }}%>
+        <% if user_signed_in? %>
+          <%= f.submit "Make the reservation", class: "btn btn-primary" %>
+        <% else %>
+          <%= link_to "login", new_user_session_path, class: "btn btn-primary" %>
+        <% end %>
+        <%= "$#{@car.price}/day" %>
       <% end %>
-      <%= "$#{@car.price}/day" %>
-    <% end %>
+    </div>
   </div>
-</div>
 
-<%= link_to 'Go to vehicules', cars_path, class: "btn btn-primary" %>
+  <%= link_to 'Go to vehicules', cars_path, class: "btn btn-primary" %>
