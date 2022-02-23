@@ -2,8 +2,11 @@
 
 <ul class="list-unstyled container">
   <% @cars.each do |car| %>
+    <div class="car-card-image" style="background-image: url('<%= car.image %>')">
+    </div>
     <li><%= link_to car.brand, car_path(car) %></li>
+    <li><%= car.price %>€/day</li>
   <% end %>
 </ul>
-
+<br>
 <%= link_to 'New vehicule', new_car_path, class: "btn btn-primary" %>
