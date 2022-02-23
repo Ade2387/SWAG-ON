@@ -25,10 +25,12 @@
 .avatar:hover {
   border-color: white;
   cursor: pointer;
+  display: block;
 }
 
 .dropdown-menu {
   background-color: black;
+  border-color: #E8217E;
 }
 
 .dropdown-item {
