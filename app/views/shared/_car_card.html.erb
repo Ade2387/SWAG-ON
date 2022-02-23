@@ -1,0 +1,16 @@
+<div class="card-container">
+  <div class="car-image" style="background-image: url(<%= car.image %>); height: 100px;"></div>
+  <div class="car-info">
+    <h5 class='car-name' ><%= car.brand %> | <%= car.model %> </h5>
+    <p class="car-occasion" ><%= car.occasion %></p>
+  </div>
+  <div class="car-owner-info">
+    <div class="owner-avatar" style="background-image: url(<%= car.user.avatar %>)" ></div>
+    <div class="owner-infos">
+      <p>
+        <%= car.user.username %>
+        <% car.price %>
+      </p>
+    </div>
+  </div>
+</div>
