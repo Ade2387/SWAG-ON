@@ -13,8 +13,11 @@ class CarsController < ApplicationController
 
   def create
     @car = Car.new(car_params)
+    @category = Category.find(params[:car][:categories][0])
     @car.user = current_user
     if @car.save
+      @car_category = CarCategory.new(category_id: @category.id, car_id: @car.id)
+      @car_category.save
       redirect_to @car, notice: 'Your car has been successfully created.'
     else
       render :new
