@@ -1,11 +1,11 @@
-<H1>INDEX</H1>
+<div class="container">
+  <div class="cards-container">
 
-<div class="cards-container">
+    <% @cars.each do |car| %>
+      <%= render 'shared/car_card',  car: car %>
+    <% end %>
 
-  <% @cars.each do |car| %>
-    <%= render 'shared/car_card',  car: car %>
-  <% end %>
-
+  </div>
 </div>
 
 <%= link_to 'New vehicule', new_car_path, class: "btn btn-primary" %>
