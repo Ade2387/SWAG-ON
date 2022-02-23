@@ -13,6 +13,11 @@ class CarsController < ApplicationController
 
   def create
     @car = Car.new(car_params)
+    if !car_params[:image].empty?
+      @car.image = car_params[:image]
+    else
+      @car.image = "https://i.pinimg.com/564x/77/b8/1b/77b81bd9b49ea414cc73c06481c965e1.jpg"
+    end
     @category_ids = params[:car][:categories]
     @car.user = current_user
     if @car.save
