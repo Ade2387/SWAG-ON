@@ -35,7 +35,7 @@ class CarsController < ApplicationController
   end
 
   def update
-    if @car.update(garden_params)
+    if @car.update(car_params)
       redirect_to @car, notice: 'Your car was successfully updated.'
     else
       render :edit
