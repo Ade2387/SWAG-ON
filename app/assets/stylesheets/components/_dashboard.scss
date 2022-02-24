@@ -1,0 +1,57 @@
+#dashboard-avatar {
+  width: 100px;
+  border-radius: 20%;
+  height: 100px;
+  border: solid 1px;
+  border-color: rgb(255, 20, 20);
+}
+
+.profile-container {
+  padding: 30px;
+  border: solid 3px;
+  border-radius: 10px;
+  border-color: black;
+  margin: 20px 10px;
+  text-align: center;
+}
+
+.mycars {
+  border: solid 1px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.ownvehicule {
+  height: 125px;
+  width: 125px;
+}
+
+.own-reservations {
+  border: solid 1px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.dashboard-container {
+  display: flex;
+}
+
+.review {
+  border: solid 1px;
+  border-color: black;
+}
+
+.reservations-container {
+  flex-grow: 2;
+  padding: 30px;
+  border: solid 3px;
+  border-color: black;
+  margin: 20px 10px;
+  border-radius: 10px;
+}
+
+.reservation-requests {
+  border: solid 1px;
+  padding: 20px;
+  border-radius: 10px;
+}

@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   end
   resources :reviews, only: [:destroy]
   resources :reservations, only: [:destroy, :show]
+  patch '/reservations/:id/accept', to: 'reservations#accept', as: :accept_reservation
+  patch '/reservations/:id/decline', to: 'reservations#decline', as: :decline_reservation
 end

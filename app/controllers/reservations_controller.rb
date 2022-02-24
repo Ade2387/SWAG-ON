@@ -29,6 +29,18 @@ class ReservationsController < ApplicationController
     @reservation.destroy
   end
 
+  def accept
+    @reservation = Reservation.find(params[:id])
+    @reservation.update(status: "confirmed")
+    redirect_to dashboard_path
+  end
+
+  def decline
+    @reservation = Reservation.find(params[:id])
+    @reservation.update(status: "declined")
+    redirect_to dashboard_path
+  end
+
   private
 
   def reservation_params
