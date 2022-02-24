@@ -1,4 +1,4 @@
-<div class="container">
+
   <div>
     <%= form_tag cars_path, method: :get do %>
     <%= text_field_tag :query,
@@ -9,11 +9,36 @@
     <%= submit_tag "Search", class: "btn btn-primary" %>
     <% end %>
   </div>
-  <div class="cards-container">
-    <% @cars.each do |car| %>
-      <%= render 'shared/car_card',  car: car %>
-    <% end %>
-  </div>
-  <%= link_to 'New vehicle', new_car_path, class: "btn btn-primary" %>
-  <%= link_to 'All vehicles', cars_path, class: "btn btn-primary" %>
+
+<%= link_to 'New vehicle', new_car_path, class: "btn btn-primary" %>
+<%= link_to 'All vehicles', cars_path, class: "btn btn-primary" %>
+
+<%# <%= link_to , car_path(car) %>
+<div class="container-card">
+  <% @cars.each do |car| %>
+      <%= link_to car_path(car) do %>
+        <div class="card">
+          <div class="card-image" style="background-image: url(<%= car.image %>)"></div>
+          <div class="card-text">
+            <span class="date"><%= car.model %></span>
+            <h2><%= car.brand %></h2>
+            <p><%= car.description %></p>
+          </div>
+          <div class="card-stats">
+            <div class="stat">
+              <div class="value"><%= car.price %></div>
+              <div class="type"><i class="material-icons me-2">euro</i></div>
+            </div>
+            <div class="stat stat-border">
+              <div class="value"><%= car.capacity %></div>
+              <div class="type"><i class="material-icons me-2">people</i></div>
+            </div>
+            <div class="stat">
+              <div class="value"><%= car.occasion %></div>
+              <%# <div class="type">comments</div> %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+  <% end %>
 </div>
