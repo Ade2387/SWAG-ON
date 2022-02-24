@@ -35,7 +35,7 @@ class CarsController < ApplicationController
   end
 
   def update
-    if @car.update(garden_params)
+    if @car.update(car_params)
       redirect_to @car, notice: 'Your car was successfully updated.'
     else
       render :edit
@@ -43,8 +43,8 @@ class CarsController < ApplicationController
   end
 
   def destroy
-    @garden.destroy
-    redirect_to @cars, notice: 'Your car was successfully deleted.'
+    @car.destroy
+    redirect_to cars_path, notice: 'Your car was successfully deleted.'
   end
 
   private
