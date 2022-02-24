@@ -53,9 +53,11 @@
           <% when "declined" %>
           <% status = "❌" %>
         <% end %>
-        <p><%= request.user.username %> made a reservation for: <%= request.car.brand %> <%= request.car.model %> from: <%= request.start_date %> until: <%= request.end_date %> <%= status %></p>
-        <%= link_to "Accept", accept_reservation_path(request), method: :patch %>
-        <%= link_to "Decline", decline_reservation_path(request), method: :patch %>
+        <% if request.status != "declined" %>
+          <p><%= request.user.username %> made a reservation DETAILS: <%= request.car.brand %> <%= request.car.model %> from: <%= request.start_date %> until: <%= request.end_date %> <%= status %></p>
+          <%= link_to "Accept", accept_reservation_path(request), method: :patch, class: "btn btn-success"%>
+          <%= link_to "Decline", decline_reservation_path(request), method: :patch, class: "btn btn-danger"%>
+        <% end %>
       <% end %>
     </div>
   </div>
