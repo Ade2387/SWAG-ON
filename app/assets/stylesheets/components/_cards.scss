@@ -1,65 +1,22 @@
-// .cards-container {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr 1fr;
-//   grid-gap: 16px;
-//   padding-top: 20px;
-// }
-
-// .card-container {
-//   margin: 0.5rem 0 1rem 0;
-//   background-color: #fff;
-//   border-radius: 2px;
-//   box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.89);
-//   position: relative;
-// }
-
-// .car-owner-info {
-//   display: flex;
-// }
-
-// .car-image {
-//   object-fit: cover;
-//   background-position: center;
-//   background-size: cover;
-//   height: 180px;
-// }
-
-// .car-name {
-//   padding-top: 10px;
-//   font-size: 25px;
-//   font-weight: bold;
-// }
-
-// .card-car-infos {
-//   padding: 20px;
-// }
-
-// .car-info H6 {
-//   font-size: 20px;
-// }
-
-// .container {
-//   padding-top: 20px
-// }
 .container-card {
   display: flex;
   flex-wrap: wrap;
   box-sizing: none !important;
 }
-.card-remove-link {
-  opacity: 0;
-}
+// .card-remove-link {
+//   opacity: 0;
+// }
 
-.hover {
-  opacity: 1;
-}
-.delete-icon {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 15px;
-  cursor: pointer;
-}
+// .hover {
+//   opacity: 1;
+// }
+// .delete-icon {
+//   position: absolute;
+//   top: 8px;
+//   right: 8px;
+//   width: 15px;
+//   cursor: pointer;
+// }
 
 .card {
   display: grid;
