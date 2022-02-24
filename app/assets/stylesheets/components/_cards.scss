@@ -97,7 +97,6 @@
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-size: cover;
-  background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%);
 }
 
 .card-text {
@@ -135,6 +134,10 @@
   flex-direction: column;
   color: white;
   padding:10px;
+}
+
+.stat-border {
+  border: 1px solid #63666a;
 }
 
 .card:hover {
