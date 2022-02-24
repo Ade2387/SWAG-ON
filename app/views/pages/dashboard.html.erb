@@ -35,12 +35,16 @@
       <% end %>
     </div>
 
+    <br></br>
+
     <div class="mycars">
       <h3>My vehicules: </h3>
       <% @cars.each do |car| %>
         <img src="<%= car.image %>" alt="pictureofvehicule" class="ownvehicule">
       <% end %>
     </div>
+
+      <br></br>
 
     <div class="reservation-requests">
       <h3>Reservation requests: </h3>

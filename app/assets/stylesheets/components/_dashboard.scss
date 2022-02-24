@@ -3,7 +3,7 @@
   border-radius: 20%;
   height: 100px;
   border: solid 1px;
-  border-color: rgb(255, 20, 20);
+  border-color: #E8217E;
 }
 
 .profile-container {
@@ -13,6 +13,9 @@
   border-color: black;
   margin: 20px 10px;
   text-align: center;
+  background-color: #32213a;
+  color: antiquewhite;
+  width: 30%;
 }
 
 .mycars {
@@ -34,24 +37,54 @@
 
 .dashboard-container {
   display: flex;
+  background-color: white;
+  background-size:initial;
+  background-position: bottom;
 }
 
-.review {
-  border: solid 1px;
-  border-color: black;
-}
 
 .reservations-container {
   flex-grow: 2;
   padding: 30px;
   border: solid 3px;
   border-color: black;
+  border-radius: solid 3px;
   margin: 20px 10px;
   border-radius: 10px;
+  background-color: #32213a;
+  color: antiquewhite;
 }
 
 .reservation-requests {
   border: solid 1px;
   padding: 20px;
   border-radius: 10px;
+}
+
+.btn-primary {
+  color: antiquewhite;
+  background-color: black;
+  border-color: #E8217E;
+  border-radius: 25px;
+}
+
+.btn-primary:hover {
+  color: #E8217E;
+  background-color: antiquewhite;
+  border-color: black;
+}
+
+.own-reservations{
+  background-color: antiquewhite;
+  color: #32213a;
+}
+
+.mycars {
+  background-color: antiquewhite;
+  color: #32213a;
+}
+
+.reservation-requests {
+  background-color: antiquewhite;
+  color: #32213a;
 }
