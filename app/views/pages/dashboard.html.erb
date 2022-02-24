@@ -38,7 +38,9 @@
     <div class="mycars">
       <h3>My vehicules: </h3>
       <% @cars.each do |car| %>
-        <img src="<%= car.image %>" alt="pictureofvehicule" class="ownvehicule">
+        <%= link_to car_path(car) do %>
+        <img src="<%= car.image %>" alt="pictureofvehicule" class="ownvehicule" >
+        <% end %>
       <% end %>
     </div>
 
