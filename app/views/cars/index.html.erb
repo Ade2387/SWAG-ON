@@ -1,11 +1,19 @@
 <div class="container">
+  <div>
+    <%= form_tag cars_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a vehicle or occasion!"
+    %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
+  </div>
   <div class="cards-container">
-
     <% @cars.each do |car| %>
       <%= render 'shared/car_card',  car: car %>
     <% end %>
-
   </div>
-
-<%= link_to 'New vehicle', new_car_path, class: "btn btn-primary" %>
+  <%= link_to 'New vehicle', new_car_path, class: "btn btn-primary" %>
+  <%= link_to 'All vehicles', cars_path, class: "btn btn-primary" %>
 </div>
