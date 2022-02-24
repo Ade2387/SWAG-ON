@@ -8,20 +8,24 @@
 
 .profile-container {
   padding: 30px;
-  border: solid 3px;
-  border-radius: 10px;
-  border-color: black;
+  border: solid 1px;
+  border-radius: 5px;
+  border-color: #000000;
   margin: 20px 10px;
   text-align: center;
-  background-color: #39373a;
-  color: antiquewhite;
+  background-color: #E8217E;
+  color: rgb(255, 255, 255);
   width: 30%;
+  box-shadow: 5px 5px 15px 5px #cac8c8;
 }
 
-.mycars {
-  border: solid 1px;
+.mycarss {
+  border: solid 5px;
+  border-color: #d498b6;;
   padding: 20px;
   border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 5px 5px 15px 5px #cac8c8;
 }
 
 .ownvehicule {
@@ -35,39 +39,45 @@
 .ownvehicule:hover {
   transform: scale(1.15);
   box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
-  transition-duration: 1s;
+  transition-duration: 250ms;
 }
 
 .own-reservations {
   border: solid 1px;
   padding: 20px;
-  border-radius: 10px;
+  background-color: #d498b6;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px 5px #dfdddd;
+  // border-color: #E8217E;
 }
 
 .dashboard-container {
   display: flex;
-  background-color: white;
+  background-color: #ffffff;
   background-size:initial;
   background-position: bottom;
+  padding: 15px 40px;
 }
 
 
 .reservations-container {
   flex-grow: 2;
-  padding: 30px;
-  border: solid 3px;
-  border-color: black;
-  border-radius: solid 3px;
+  // padding: 30px;
+  // border: solid 1px;
+  // border-color: #E8217E;
+  // border-radius: solid 3px;
   margin: 20px 10px;
-  border-radius: 10px;
-  background-color: #39373a;
-  color: antiquewhite;
+  // border-radius: 5px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
 }
 
 .reservation-requests {
-  border: solid 1px;
+  border: solid 5px;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 5px;
+  border-color: #d498b6;
+  box-shadow: 5px 5px 15px 5px #cac8c8;
 }
 
 .btn-primary {
@@ -84,16 +94,31 @@
 }
 
 .own-reservations{
-  background-color: antiquewhite;
+  background-color: #f8c9df;;
   color: #39373a;
+  border-radius: 5px;
 }
 
 .mycars {
-  background-color: antiquewhite;
+  background-color: rgb(255, 255, 255);
   color: #39373a;
+  // border: solid 2px;
+  // border-color: #E8217E;
 }
 
 .reservation-requests {
-  background-color: antiquewhite;
+  background-color: rgb(255, 255, 255);
   color: #39373a;
+}
+
+.reviewrating {
+  border-bottom: solid 4px;
+  border-color: #000000;
+  border-radius: 7%;
+  padding: 0px 0px 15px 0px;
+  text-align: center;
+}
+
+.reviewcontent {
+  text-align: left;
 }

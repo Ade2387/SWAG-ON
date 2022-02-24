@@ -12,9 +12,12 @@
       <a href="/users/edit" class="btn btn-primary">Edit profile</a>
       <br>
       <br>
-      <h4>Your reviews:</h4>
+      <h2>Your reviews:</h2>
       <% @reviews.each do |review| %>
-        <p class="review"><%= review.content %> -> <%= review.rating %> ⭐️ <%= review.car.model %></p>
+        <br>
+        <h4><b><%= review.car.brand %> - <%= review.car.model %></b></h4>
+        <p class="reviewcontent"><%= review.content %></p>
+        <h3 class="reviewrating"><%= "⭐️" * review.rating %></h3>
       <% end %>
     </div>
   </div>
@@ -25,19 +28,19 @@
       <% @reservations.each do |reservation| %>
       <% case reservation.status %>
           <% when "pending" %>
-          <% status = "⏳" %>
+          <% status = " ⏳ ( Pending )" %>
           <% when "confirmed" %>
-          <% status = "✅" %>
+          <% status = " ✅" %>
           <% when "declined" %>
-          <% status = "❌" %>
+          <% status = " ❌ ( Declined )" %>
         <% end %>
-        <p><%= reservation.car.brand %> <%= reservation.car.model %> from: <%= reservation.start_date %> until: <%= reservation.end_date %> <%= status %></p>
+        <p><b><%= reservation.car.brand %> - <%= reservation.car.model %></b> from: <%= reservation.start_date %> until: <%= reservation.end_date %> <b><%= status %></b></p>
       <% end %>
     </div>
 
     <br></br>
 
-    <div class="mycars">
+    <div class="mycarss">
       <h3>My vehicules: </h3>
       <% @cars.each do |car| %>
         <%= link_to car_path(car) do %>
@@ -60,7 +63,7 @@
           <% status = "❌" %>
         <% end %>
         <% if request.status != "declined" %>
-          <p><%= request.user.username %> made a reservation DETAILS: <%= request.car.brand %> <%= request.car.model %> from: <%= request.start_date %> until: <%= request.end_date %> <%= status %></p>
+          <p><b><%= request.user.username %></b> made a reservation DETAILS: <b><%= request.car.brand %> <%= request.car.model %></b> from: <%= request.start_date %> until: <%= request.end_date %> <%= status %></p>
           <%= link_to "Accept", accept_reservation_path(request), method: :patch, class: "btn btn-success"%>
           <%= link_to "Decline", decline_reservation_path(request), method: :patch, class: "btn btn-danger"%>
         <% end %>

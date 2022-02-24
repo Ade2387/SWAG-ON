@@ -23,6 +23,8 @@
   <% end %>
   <%= link_to 'Go to vehicles', cars_path, class: "btn btn-primary" %>
   <%= link_to 'Edit vehicle', edit_car_path(@car), class: "btn btn-primary"  %>
-  <%= link_to 'Book this vehicle', new_car_reservation_path(@car), class: "btn btn-primary"  %>
+  <% if @car.user != current_user %>
+    <%= link_to 'Book this vehicle', new_car_reservation_path(@car), class: "btn btn-primary"  %>
+  <% end %>
   <br>
 </div>
