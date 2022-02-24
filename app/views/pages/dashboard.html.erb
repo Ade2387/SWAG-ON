@@ -13,7 +13,7 @@
       <br>
       <br>
       <h2>Your reviews:</h2>
-      <% @reviews.each do |review| %>
+      <% @reviews.first(2).each do |review| %>
         <br>
         <h4><b><%= review.car.brand %> - <%= review.car.model %></b></h4>
         <p class="reviewcontent"><%= review.content %></p>
