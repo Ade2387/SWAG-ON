@@ -2,6 +2,12 @@ class CarsController < ApplicationController
   before_action :set_car, only: [:show, :edit, :update, :destroy]
   def index
     @cars = Car.all
+
+    if params[:query].present?
+      @cars = Car.global_search(params[:query])
+    else
+      @cars = Car.all
+    end
   end
 
   def show
