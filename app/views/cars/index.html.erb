@@ -3,7 +3,6 @@
 <%# <%= link_to , car_path(car) %>
 <div class="container-card">
   <% @cars.each do |car| %>
-    <%# <a href="<%= link_to "", car_path(car) %>
       <div class="card">
         <div class="card-image" style="background-image: url(<%= car.image %>)"></div>
         <div class="card-text">
@@ -26,6 +25,5 @@
           </div>
         </div>
       </div>
-    <%# </a> %>
   <% end %>
 </div>
