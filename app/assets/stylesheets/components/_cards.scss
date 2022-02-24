@@ -47,28 +47,19 @@
   box-sizing: none !important;
 }
 .card-remove-link {
-  color: white;
-  border-radius: 50%;
-  border: 1px solid white;
-  justify-content: center;
-  align-items: center;
-  height: 20px;
-  width: 20px;
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  display: flex;
   opacity: 0;
-  transform: rotate(45deg);
-  font-weight: lighter;
-  text-decoration: none;
 }
 
 .hover {
-  color: white;
   opacity: 1;
 }
-
+.delete-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 15px;
+  cursor: pointer;
+}
 
 .card {
   display: grid;
@@ -147,8 +138,4 @@
 
 a {
   text-decoration: none
-}
-
-*, *::before, *::after {
-  box-sizing: none !important;
 }

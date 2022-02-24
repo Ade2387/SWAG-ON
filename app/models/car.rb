@@ -11,7 +11,7 @@ class Car < ApplicationRecord
   pg_search_scope :global_search,
     against: [ :brand, :model, :occasion ],
     associated_against: {
-      categories: [ :name ]
+      categories: [:name]
     },
     using: {
       tsearch: { prefix: true }
