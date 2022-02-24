@@ -7,4 +7,13 @@ class Car < ApplicationRecord
   validates :brand, :model, :description, presence: true
   validates :price, :capacity, presence: true, numericality: { only_integer: true }
 
+  include PgSearch::Model
+  pg_search_scope :global_search,
+    against: [ :brand, :model, :occasion ],
+    associated_against: {
+      categories: [ :name ]
+    },
+    using: {
+      tsearch: { prefix: true }
+    }
 end
