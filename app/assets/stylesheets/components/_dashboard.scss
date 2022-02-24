@@ -13,7 +13,7 @@
   border-color: black;
   margin: 20px 10px;
   text-align: center;
-  background-color: #32213a;
+  background-color: #39373a;
   color: antiquewhite;
   width: 30%;
 }
@@ -35,6 +35,7 @@
 .ownvehicule:hover {
   transform: scale(1.15);
   box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+  transition-duration: 1s;
 }
 
 .own-reservations {
@@ -59,7 +60,7 @@
   border-radius: solid 3px;
   margin: 20px 10px;
   border-radius: 10px;
-  background-color: #32213a;
+  background-color: #39373a;
   color: antiquewhite;
 }
 
@@ -84,15 +85,15 @@
 
 .own-reservations{
   background-color: antiquewhite;
-  color: #32213a;
+  color: #39373a;
 }
 
 .mycars {
   background-color: antiquewhite;
-  color: #32213a;
+  color: #39373a;
 }
 
 .reservation-requests {
   background-color: antiquewhite;
-  color: #32213a;
+  color: #39373a;
 }
