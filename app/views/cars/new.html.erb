@@ -1,15 +1,17 @@
-<div class="container">
+<div class="text-light">
   <H1>NEW VEHICLE</H1>
   <%= simple_form_for([@car]) do |f| %>
-    <%= f.input :brand %>
-    <%= f.input :model %>
-    <%= f.input :capacity %>
-    <%= f.input :categories, collection: Category.all, input_html: { multiple: true, class: "multiple-select" }, include_hidden: false %>
-    <%= f.input :occasion %>
-    <%= f.input :price %>
-    <%= f.input :description %>
-    <%= f.input :image %>
-    <%= f.submit "Add vehicle" %>
+    <div class=new-car-form>
+      <%= f.input :brand %>
+      <%= f.input :model %>
+      <%= f.input :capacity %>
+      <%= f.input :categories, collection: Category.all, input_html: { multiple: true, class: "multiple-select" }, include_hidden: false %>
+      <%= f.input :occasion %>
+      <%= f.input :price %>
+      <%= f.input :description %>
+      <%= f.input :image %>
+      <%= f.submit "Add vehicle" %>
+    </div>
   <% end %>
   <br>
   <%= link_to 'Go to vehicles', cars_path, class: "btn btn-primary" %>

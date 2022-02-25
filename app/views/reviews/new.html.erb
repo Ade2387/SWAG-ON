@@ -1,10 +1,12 @@
-<div class="container">
-  <H1>New Review</H1>
-  <%= simple_form_for([@car, @review]) do |f| %>
-    <%= f.input :content %>
-    <%= f.input :rating %>
-    <%= f.submit "Add a review" %>
-  <% end %>
-</div>
+<div class="text-light">
+  <div class="container">
+    <H1>New Review</H1>
+    <%= simple_form_for([@car, @review]) do |f| %>
+      <%= f.input :content %>
+      <%= f.input :rating %>
+      <%= f.submit "Add a review" %>
+    <% end %>
+  </div>
 <br>
 <%= link_to 'Go to vehicules', cars_path, class: "btn btn-primary" %>
+</div>
