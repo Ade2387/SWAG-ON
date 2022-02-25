@@ -1,5 +1,5 @@
 <div class="card-product">
-  <img class="card-img-left" src="<%= @car.image %>" />
+  <%= cl_image_tag @car.photo.key, class: "card-img-left" %>
   <div class="card-body">
     <div class="price"><%= @car.price %>€/day</div>
     <h2><%= @car.model %></h2>
@@ -16,9 +16,6 @@
     <% end %>
   </div>
 </div>
-
-<%= cl_image_tag("hwlmr8qikwexer7hpzdq",
-      width: 400, height: 300, crop: :fill) %>
 
 <div class="container">
   <% if user_signed_in? %>

@@ -141,10 +141,11 @@ a {
 .card-product img {
   height: 100%;
   width: 350px;
-  object-fit: cover;
+  // object-fit: cover !important;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   background-size: cover;
+  background-position: center;
 }
 
 .card-product h2 {

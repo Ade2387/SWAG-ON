@@ -4,6 +4,7 @@ class Car < ApplicationRecord
   has_many :reviews, dependent: :destroy
   has_many :categories, through: :car_categories
   has_many :reservations
+  has_one_attached :photo
   validates :brand, :model, :description, presence: true
   validates :price, :capacity, presence: true, numericality: { only_integer: true }
 
