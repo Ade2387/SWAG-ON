@@ -1,7 +1,6 @@
- <div class="container">
-  <H1>EDIT THIS VEHICLE</H1>
-
-  <%= simple_form_for([@car]) do |f| %>
+<div class="text-light">
+  <h1>EDIT THIS VEHICLE</h1>
+    <%= simple_form_for([@car], ) do |f| %>
       <%= f.input :brand %>
       <%= f.input :model %>
       <%= f.input :capacity %>
@@ -9,7 +8,7 @@
       <%= f.input :price %>
       <%= f.input :description %>
       <%= f.input :image %>
-      <%= f.submit "Save" %>
+      <%= f.submit "Save", class: "btn btn-primary" %>
     <% end %>
   <br>
   <%= link_to 'Go to vehicles', cars_path, class: "btn btn-primary" %>
