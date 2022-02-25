@@ -18,11 +18,21 @@
     </div>
   </div>
   <br>
+
   <% if user_signed_in? %>
     <%= link_to 'Add a review', new_car_review_path(@car), class: "btn btn-primary" %>
   <% end %>
+
+  <% if @car.user == current_user %>
+    <%= link_to "Edit Vehicle", edit_car_path(@car), class: "btn btn-primary" %>
+  <% end %>
+
+  <% if @car.user == current_user %>
+    <%= link_to "Delete", @car, method: :delete, data: { confirm: "Are you sure you want to delete #{@car.brand}?" }, class: "btn btn-primary" %>
+  <% end %>
+
   <%= link_to 'Go to vehicles', cars_path, class: "btn btn-primary" %>
-  <%= link_to 'Edit vehicle', edit_car_path(@car), class: "btn btn-primary"  %>
+
   <% if @car.user != current_user %>
     <%= link_to 'Book this vehicle', new_car_reservation_path(@car), class: "btn btn-primary"  %>
   <% end %>

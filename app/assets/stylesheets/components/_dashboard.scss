@@ -2,30 +2,30 @@
   width: 100px;
   border-radius: 20%;
   height: 100px;
-  border: solid 1px;
+  border: solid 2px;
   border-color: #E8217E;
 }
 
 .profile-container {
   padding: 30px;
-  border: solid 1px;
+  border: solid 5px;
   border-radius: 5px;
   border-color: #000000;
   margin: 20px 10px;
   text-align: center;
-  background-color: #E8217E;
+  background-color: grey;
   color: rgb(255, 255, 255);
   width: 30%;
-  box-shadow: 5px 5px 15px 5px rgba(223, 221, 221, 0.4);
+  box-shadow: 1px 1px 5px 1px rgba(223, 221, 221, 0.4);
 }
 
 .mycarss {
   border: solid 5px;
-  border-color: #d498b6;;
+  border-color: black;
   padding: 20px;
   border-radius: 10px;
-  background-color: #ffffff;
-  box-shadow: 5px 5px 15px 5px rgba(223, 221, 221, 0.4);
+  background-color: grey;
+  box-shadow: 1px 1px 5px 1px rgba(223, 221, 221, 0.4);
 }
 
 .ownvehicule {
@@ -34,6 +34,8 @@
   border-radius: 20%;
   object-fit: cover;
   background-position: center;
+  border: solid 2px black;
+  transition-duration: 0.5s;
 }
 
 .ownvehicule:hover {
@@ -43,20 +45,23 @@
 }
 
 .own-reservations {
-  border: solid 1px;
+  border: solid 5px;
+  border-color: black;
   padding: 20px;
-  background-color: #d498b6;
+  background-color: grey;
   border-radius: 5px;
-  box-shadow: 5px 5px 15px 5px rgba(223, 221, 221, 0.4);
+  box-shadow: 1px 1px 5px 1px rgba(223, 221, 221, 0.4);
   // border-color: #E8217E;
 }
 
 .dashboard-container {
   display: flex;
-  background-color: #ffffff;
+  background-color: grey;
   background-size:initial;
-  background-position: bottom;
+  background-position: fixed;
   padding: 15px 40px;
+  background-image: url(background.jpg);
+  background-image: fixed;
 }
 
 
@@ -68,47 +73,51 @@
   // border-radius: solid 3px;
   margin: 20px 10px;
   // border-radius: 5px;
-  background-color: #ffffff;
+  background-color: grey;
   color: rgb(0, 0, 0);
+  background:transparent;
 }
 
 .reservation-requests {
   border: solid 5px;
   padding: 20px;
   border-radius: 5px;
-  border-color: #d498b6;
-  box-shadow: 5px 5px 15px 5px rgba(223, 221, 221, 0.4);
+  border-color: black;
+  box-shadow: 1px 1px 5px 1px rgba(223, 221, 221, 0.4);
 }
 
 .btn-primary {
-  color: antiquewhite;
+  color: white;
   background-color: black;
   border-color: #E8217E;
   border-radius: 25px;
+  transition-duration: 0.5s;
 }
 
 .btn-primary:hover {
   color: #E8217E;
-  background-color: antiquewhite;
-  border-color: black;
+  background-color: white;
+  text-decoration: underline;
+  border-color: #E8217E;
 }
 
 .own-reservations{
-  background-color: #f8c9df;;
-  color: #39373a;
+  background-color: grey;
+  color: white;
   border-radius: 5px;
+  border-color: black ;
 }
 
 .mycars {
   background-color: rgb(255, 255, 255);
-  color: #39373a;
-  // border: solid 2px;
-  // border-color: #E8217E;
+  color: white;
+  border: solid 2px;
+  border-color: black;
 }
 
 .reservation-requests {
-  background-color: rgb(255, 255, 255);
-  color: #39373a;
+  background-color: grey;
+  color: white;
 }
 
 .reviewrating {
@@ -121,4 +130,30 @@
 
 .reviewcontent {
   text-align: left;
+}
+
+.profile-container h3 {
+  color:rgb(0, 0, 0);
+  text-decoration: underline;
+}
+
+.own-reservations h3 {
+  color: #000000;
+  text-decoration: underline;
+}
+.mycarss h3 {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.reservation-requests h3 {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.reservation-requests .btn-success .btn-danger:hover {
+  transition-duration: 1s;
+  padding: 0 0 0 5;
+  border: solid 2px #000000;
+  transform: scale(1.1);
 }
