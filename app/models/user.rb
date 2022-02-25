@@ -7,5 +7,5 @@ class User < ApplicationRecord
   has_many :reservations, dependent: :destroy
   has_many :reviews, dependent: :destroy
   validates :username, presence: true, uniqueness: true
-  attribute :avatar, default: "https://mycoloring-pages.com/images/stencils/car-stencils/car-stencils-11.jpg"
+  attribute :avatar, default: "https://w7.pngwing.com/pngs/329/446/png-transparent-deadpool-football-manager-2017-spider-man-football-manager-2018-youtube-deadpool-comics-face-photography-thumbnail.png"
 end
