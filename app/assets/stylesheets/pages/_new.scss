@@ -2,9 +2,23 @@
 width: 450px;
 }
 
+.sign-up-container {
+  width: 450px;
+  color: white;
+}
+
+.password-container {
+  width: 450px;
+  color: white;
+}
+
 .text-light {
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.devise-buttons {
+  color:white;
 }
 
 #new-review-forms {
@@ -12,5 +26,5 @@ width: 450px;
 }
 
 #login-form {
-  width: 400px;
+  width: 450px;
 }
