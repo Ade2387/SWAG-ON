@@ -1,0 +1,19 @@
+<div classe="show-container-card">
+  <div class="show-card">
+    <div class="show-card-image" style="background-image: url(<%= @car.image %>)"></div>
+      <div class="show-card-text">
+        <span class="show-date"><%= @car.model %></span>
+        <h2><%= @car.brand %></h2>
+        <p><%= @car.description %></p>
+        <% @car.reviews.each do |review| %>
+          <div class="reviews">
+            <p><%= review.content %> <%= review.rating %>/5</p>
+            <span class="delete"><%= link_to 'Delete review', review_path(review),
+              method: :delete,
+              data: { confirm: "Are you sure?" } %></span>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
