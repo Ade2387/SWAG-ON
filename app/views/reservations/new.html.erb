@@ -1,19 +1,20 @@
 <div class="container">
   <div class="flex-container" data-controller="date">
-    <div class="cardgrow">
-      <div class="card-car">
-        <img src= <%= @car.image %> />
-        <div class="card-car-infos">
-          <h2><%= @car.brand %></h2>
-          <h3><%= @car.description %></h3>
-          <br>
-
-          <% @car.reviews.each do |review| %>
-            <div class="reviews">
-            <p><%= review.content %> <%= review.rating %>/5</p>
+    <div class="card-product">
+      <img class="card-img-left" src="<%= @car.image %>" />
+      <div class="card-body">
+        <h2><%= @car.model %></h2>
+        <p><%= @car.description %></p>
+        <% @car.reviews.each do |review| %>
+          <div class="reviews">
+            <div class="reviews-comment">
+              <i><%= review.content %></i> <%= review.rating %>/5
+              <span class="delete"><%= link_to 'X', review_path(review),
+                method: :delete,
+                data: { confirm: "Are you sure?" } %></span>
             </div>
-          <% end %>
-        </div>
+          </div>
+        <% end %>
       </div>
     </div>
     <div class="reservation-container">

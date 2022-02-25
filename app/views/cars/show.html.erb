@@ -1,23 +1,29 @@
 
-<div class="container">
-  <div class="card-car">
-    <img src= <%= @car.image %> />
-    <div class="card-car-infos">
-      <h2><%= @car.brand %></h2>
-      <h3><%= @car.description %></h3>
-      <br>
-      <h6><%= @car.price %>€/day</h6>
-      <% @car.reviews.each do |review| %>
+
+
+
+
+<div class="card-product">
+  <img class="card-img-left" src="<%= @car.image %>" />
+  <div class="card-body">
+    <h2><%= @car.model %></h2>
+    <p><%= @car.description %></p>
+    <% @car.reviews.each do |review| %>
       <div class="reviews">
-        <p><%= review.content %> <%= review.rating %>/5</p>
-        <span class="delete"><%= link_to 'Delete review', review_path(review),
-              method: :delete,
-              data: { confirm: "Are you sure?" } %></span>
+        <div class="reviews-comment">
+          <i><%= review.content %></i> <%= review.rating %>/5
+          <span class="delete"><%= link_to 'X', review_path(review),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %></span>
+        </div>
       </div>
-      <% end %>
-    </div>
+    <% end %>
   </div>
-  <br>
+</div>
+
+
+
+<div class="container">
   <% if user_signed_in? %>
     <%= link_to 'Add a review', new_car_review_path(@car), class: "btn btn-primary" %>
   <% end %>
@@ -28,6 +34,7 @@
   <% end %>
   <br>
 </div>
+
 
     <%# <div class="card" data-controller="card" data-action="mouseover->card#hoverDelete mouseout->card#hoverDelete"> %>
       <%# <%= link_to car_path(car), method: :delete, data: { confirm: "Are you sure?", "card-target"=>"delete"}, class: "card-remove-link" do %>
