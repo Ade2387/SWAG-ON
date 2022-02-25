@@ -95,15 +95,16 @@ a {
 }
 
 
-.delete {
+.delete a{
   padding-left: 20px;
   text-decoration: none !important;
+  color:#E11E7A !important;
 
 }
 
 
 .card-product {
-  height: 200px;
+  min-height: 270px;
   display: flex;
   align-items: center;
   border-radius: 15px;
@@ -114,8 +115,23 @@ a {
   text-align: justify;
   margin:30px;
   box-sizing: content-box;
+  position: relative
 }
 
+.card-body{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.price {
+  position: absolute;
+  top: 11px;
+  right: 19px;
+  border: 1px solid;
+  border-radius: 25px;
+  padding: 6px;
+  color: gold;
+}
 .card-product-infos {
   margin: 25px 10px;
   border-top-right-radius: 15px;

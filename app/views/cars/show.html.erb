@@ -1,11 +1,7 @@
-
-
-
-
-
 <div class="card-product">
   <img class="card-img-left" src="<%= @car.image %>" />
   <div class="card-body">
+    <div class="price"><%= @car.price %>€/day</div>
     <h2><%= @car.model %></h2>
     <p><%= @car.description %></p>
     <% @car.reviews.each do |review| %>
